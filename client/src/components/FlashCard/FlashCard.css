@@ -1,0 +1,16 @@
+.card {
+    width:40vw;
+    /* height: 200px; */
+    background-color: rgb(230, 224, 220);
+    display: flex;
+    justify-content: space-around;
+     margin: 20px;
+    }
+
+img {
+    margin-right: 10px;
+}
+
+p {
+    margin-left: 10px;
+}

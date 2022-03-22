@@ -1,0 +1,11 @@
+.card-nav{
+    width:15vw;
+    background-color: rgb(230, 224, 220);
+    display: flex;
+    list-style-type:none;
+    text-align: left;  
+    height: 85%;
+
+}
+
+li {list-style-type: none;}
