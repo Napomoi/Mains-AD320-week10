@@ -1,7 +1,23 @@
-import React from 'react'
-import { Button, Box, TextField, Typography } from '@mui/material'
+import User from './components/User/User'
+white_check_mark
+eyes
+raised_hands
 
+
+
+
+
+8:20
+Register class
+8:20
+import React from 'react'
+import { useAuth } from '../Auth/AuthProvider'
+import { Button, Box, TextField, Typography } from '@mui/material'
+import { Navigate, useNavigate, useLocation } from 'react-router-dom'
+import Login from '../Login/Login'
 const Register = () => {
+  const {auth, register } = useAuth()
+  const navigate = useNavigate()
   // Assignment: use the useAuth hook here to handle registering a new user
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -10,8 +26,10 @@ const Register = () => {
       email: data.get('email'),
       password: data.get('password'),
     })
+    register(data.get('email'), data.get('password'), () => {
+      navigate("/login", { replace: true })
+    })
   }
-
   return (
     <Box
       sx={{
@@ -57,5 +75,4 @@ const Register = () => {
     </Box>
   )
 }
-
 export default Register
